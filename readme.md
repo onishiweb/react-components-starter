@@ -7,7 +7,7 @@ This is a starter project for creating a React frontend project using Webpack, S
 
 Run `npm install` to install dependencies
 
-### Scripts
+### Scripts
 
 `npm start` - will run `webpack-dev-server` including style linting and prettier.
 
