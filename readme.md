@@ -13,4 +13,10 @@ Run `npm install` to install dependencies
 
 `npm run build` - will run the production build of webpack, compiling assets to the `dist/` folder.
 
-`npm test` - runs Jest tests.
+`npm test` - runs Jest tests including visual regression tests using `jest-image-snapshot`.
+
+`npm test:a11y` - runs accessibility tests with Pa11y CI on the landing page.
+
+## Testing
+
+To run tests locally you must make sure the app is running first via `npm start` before you can run tests with either `npm test` or `npm test:a11y`.
