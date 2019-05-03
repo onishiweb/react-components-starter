@@ -15,7 +15,7 @@ Run `npm install` to install dependencies
 
 `npm test` - runs Jest tests including visual regression tests using `jest-image-snapshot`.
 
-`npm test:a11y` - runs accessibility tests with Pa11y CI on the landing page.
+`npm run test:a11y` - runs accessibility tests with Pa11y CI on the landing page.
 
 ## Testing
 
