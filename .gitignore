@@ -1,3 +1,11 @@
+# Built files
 dist
+
+# Node modules
 node_modules
+
+# Testing output
+coverage/
 src/__snapshots__
+__tests__/__snapshots__
+__tests__/__image_snapshots__

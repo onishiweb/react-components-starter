@@ -1,12 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const Para = styled.p`
-	font-size: 20px;
-`
+import Button from './components/button'
 
 const App = () => {
-	return <Para>React here!</Para>
+	return (
+		<>
+			<p>React here!</p>
+			<Button />
+		</>
+	)
 }
 
 export default App
