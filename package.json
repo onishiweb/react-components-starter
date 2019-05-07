@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "jest --collectCoverage --setupFiles='<rootDir>/jest/setup.js'",
-    "test:a11y": "./node_modules/.bin/pa11y-ci"
+    "test:a11y": "pa11y-ci"
   },
   "keywords": [],
   "author": "",
