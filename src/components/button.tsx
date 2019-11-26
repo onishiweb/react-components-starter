@@ -1,8 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
-
 import colors from '../styles/colors'
+
+type ButtonProps = {
+	text: string
+}
 
 const ButtonEl = styled.button`
 	padding: 5px 10px;
@@ -22,16 +24,8 @@ const ButtonEl = styled.button`
 	}
 `
 
-const Button = props => {
-	return <ButtonEl>{props.text}</ButtonEl>
-}
-
-Button.propTypes = {
-	text: PropTypes.string
-}
-
-Button.defaultProps = {
-	text: 'Press me!'
+const Button = ({ text }: ButtonProps) => {
+	return <ButtonEl>{text}</ButtonEl>
 }
 
 export default Button
