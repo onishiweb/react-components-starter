@@ -5,17 +5,27 @@ const PrettierPlugin = require('prettier-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    },
     module: {
       rules: [
-        {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
+
+        // changed from { test: /\.jsx?$/, use: { loader: 'babel-loader' } },
+        { 
+            test: /\.(t|j)(s|sx)?$/,
+            use: { 
+                loader: 'awesome-typescript-loader' 
+            } 
+        },
+        // addition - add source-map support
+        { 
+            enforce: "pre", 
+            test: /\.js$/, 
+            loader: "source-map-loader" 
         },
         {
-            test: /\.(js|jsx)?$/,
+            test: /\.(t|j)(s|sx)?$/,
             loader: 'stylelint-custom-processor-loader',
             exclude: /node_modules/,
         },
@@ -29,9 +39,6 @@ module.exports = {
             ]
         }
       ]
-    },
-    resolve: {
-        extensions: ['.js', '.jsx'],
     },
     plugins: [
         new PrettierPlugin({
