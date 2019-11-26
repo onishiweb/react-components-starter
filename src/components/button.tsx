@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import colors from '../styles/colors'
 
 type ButtonProps = {
-	text: string
+	text?: string
 }
 
 const ButtonEl = styled.button`
