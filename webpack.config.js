@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const PrettierPlugin = require('prettier-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
